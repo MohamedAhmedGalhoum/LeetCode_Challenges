@@ -1,0 +1,12 @@
+vector<vector<int>> findMatrix(vector<int>& nums) {
+    int n = nums.size();
+    vector<int> freq(n + 1 , 0);
+    for(auto it : nums) freq[it]++;
+    int mx = *max_element(freq.begin() , freq.end());
+    vector<vector<int>>ret(mx);
+    for(int i = 1 ; i <= n; i++){
+        int idx = 0;
+        while(freq[i]--) ret[idx++].push_back(i);
+    }
+    return ret;
+}
