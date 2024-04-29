@@ -1,4 +1,4 @@
-class 1418_Display_Table_of_Food_Orders_in_a_Restaurant {
+class Display_Table_of_Food_Orders_in_a_Restaurant {
 public:
     vector<vector<string>> displayTable(vector<vector<string>>& orders) {
         map<pair<string , string> , int>food;
