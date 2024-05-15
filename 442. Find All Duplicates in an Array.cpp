@@ -13,3 +13,20 @@ public:
         return res;
     }
 };
+// Another Solution with Amazing Work-around !! //
+class Solution {
+public:
+    vector<int> findDuplicates(vector<int>& nums) {
+        vector<int>answer;
+        int freq[100001] = {0};
+        for(int i = 0 ; i < nums.size() ; i++){
+            freq[nums[i]]++;
+        }
+        for(int i = 0 ; i < 100001 ; i++){
+            if(freq[i] and freq[i] == 2){
+                answer.push_back(i); 
+            }
+        }
+        return answer; 
+    }
+};
